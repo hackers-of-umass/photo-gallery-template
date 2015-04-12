@@ -1,0 +1,95 @@
+/*
+Hi! Here are our custom CSS (Cascading Style Sheets) styles for the gallery.
+CSS looks like this:
+
+selector1 {
+    property: value;
+    property: value;
+}
+
+selector2 {
+    property: value;
+}
+
+Selectors can be a class, ID, or tagname. There are tons of properties you can
+edit as well, from background-color, to display, to z-index, etc. Here's a list
+of available properties: http://www.w3schools.com/cssref/
+
+Note that not all browsers support all CSS features equally; it's good to reference sites
+like http://caniuse.com/ when writing CSS to ensure cross-browser compatibility.
+
+Styles are applied in the order that they are provided; this is where the
+"cascading" part of the name comes from. That means you can override your own styles,
+so be careful! This means that the order you include CSS files in your HTML matters
+too.
+*/
+
+.content {
+    /*
+    Sets amount of space around an element. This syntax is shorthand for:
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    */
+    margin: 0 auto;
+
+    /* The content div in our HTML can't get wider than 1100px. */
+    max-width: 1100px;
+}
+
+.title {
+    /* This is a "font stack"; if the first font isn't available,
+    the fallback will be loaded. You can make this list as long as you want. */
+    font-family: 'Source Sans Pro', sans-serif;
+
+    /* Sets the thickness of our font. */
+    font-weight: 200;
+
+    /* Pretty self-explanatory; options include left, center, and right. */
+    text-align: center;
+
+    margin: 35px auto;
+}
+
+.row {
+    /* 100% the width of its parent element */
+    width: 100%;
+
+    text-align: center;
+}
+
+.col-4 {
+    width: 100%;
+
+    /* The display property lets you switch between making an element take up
+    it's full available width and making it only use the needed space to keep
+    room for other elements. Try messing with it! */
+    display: inline-block;
+
+    margin: 20px auto;
+}
+
+.img-responsive {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+The things below are called "media queries"; they let us set specific styles
+that depend on the screen size. This allows for websites to look different on
+phones, tablets, and desktops, or when making something print-friendly, etc.
+*/
+
+@media only screen and (min-width: 724px) {
+    .col-4 {
+        width: 48.5%; /* Overrides width: 100% from above */
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .col-4 {
+        width: 32.5%; /* Overrides width: 48.5% from above */
+    }
+}
