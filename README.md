@@ -1,5 +1,7 @@
 # Photo Gallery Template
 
+Preview available [here](https://raw.githack.com/hackers-of-umass/photo-gallery-template/master/index.html)
+
 ---
 
 ### Getting Started
